@@ -1,13 +1,16 @@
 import asyncio
+import os
+from dotenv import load_dotenv
 from pathlib import Path
-
 from aiohttp import ClientSession
 from blinkpy.blinkpy import Blink
 from blinkpy.auth import Auth
 from blinkpy.helpers.util import json_load
 from blinkpy.exceptions import BlinkTwoFARequiredError
 
-AUTH_PATH = Path("blink_auth.json")
+load_dotenv()
+
+AUTH_PATH = Path(os.getenv("BLINK_AUTH_PATH", "blink_auth.json"))
 
 async def main():
     async with ClientSession() as session:
