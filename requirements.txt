@@ -1,0 +1,4 @@
+blinkpy
+pydrive2
+opencv-python
+python-dotenv
