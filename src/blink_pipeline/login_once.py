@@ -37,14 +37,18 @@ async def main():
                 # If your account has 2FA, this will ask you to enter the code
                 logger.info("Two-factor authentication required")
                 await blink.prompt_2fa()
+                 # Verify authentication succeeded after 2FA
+            if not blink.auth.check_key_required():
+                # Re-start to complete the authentication flow
+                await blink.start()
 
             # If we reached here, we are logged in. Save tokens for future runs.
             await blink.save(str(AUTH_PATH))
+            AUTH_PATH.chmod(0o600)  # Owner read/write only
             logger.info(f"Saved Blink auth to {AUTH_PATH.resolve()}")
     except Exception as e:
         logger.error(f"Authentication failed: {e}")
         raise
-
 
 if __name__ == "__main__":
     asyncio.run(main())
