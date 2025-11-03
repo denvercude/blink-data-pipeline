@@ -1,0 +1,4 @@
+blinkpy==0.24.1
+pydrive2==1.21.3
+opencv-python==4.12.0.88
+python-dotenv==1.1.1
