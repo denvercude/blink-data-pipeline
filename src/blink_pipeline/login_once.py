@@ -35,12 +35,10 @@ async def main():
                 await blink.prompt_2fa()
             if blink.auth.token and blink.auth.account_id and blink.auth.region_id:
                 await blink.save(str(AUTH_PATH))
+                AUTH_PATH.chmod(0o600)
+                logger.info(f"Saved Blink auth to {AUTH_PATH.resolve()}")
             else:
                 logger.error("Auth incomplete — token or region info missing, not saving.")
-
-            await blink.save(str(AUTH_PATH))
-            AUTH_PATH.chmod(0o600)
-            logger.info(f"Saved Blink auth to {AUTH_PATH.resolve()}")
     except BlinkTwoFARequiredError:
         # Re-raise if 2FA wasn't handled properly
         logger.error("Two-factor authentication failed or was not completed")
