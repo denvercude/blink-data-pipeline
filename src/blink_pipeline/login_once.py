@@ -20,34 +20,36 @@ async def main():
         async with ClientSession() as session:
             blink = Blink(session=session)
 
-            # If we already have saved auth, load it
             if AUTH_PATH.exists():
                 logger.info(f"Loading existing auth from {AUTH_PATH}")
                 auth_data = await json_load(str(AUTH_PATH))
                 blink.auth = Auth(auth_data, no_prompt=True)
             else:
-                # First time: create an auth handler that will prompt
                 logger.info("No saved auth found, prompting for credentials")
                 blink.auth = Auth({}, no_prompt=False)
 
             try:
-                # This will prompt for username/password in terminal
                 await blink.start()
             except BlinkTwoFARequiredError:
-                # If your account has 2FA, this will ask you to enter the code
                 logger.info("Two-factor authentication required")
                 await blink.prompt_2fa()
-                 # Verify authentication succeeded after 2FA
-            if not blink.auth.check_key_required():
-                # Re-start to complete the authentication flow
-                await blink.start()
+            if blink.auth.token and blink.auth.account_id and blink.auth.region_id:
+                await blink.save(str(AUTH_PATH))
+            else:
+                logger.error("Auth incomplete — token or region info missing, not saving.")
 
-            # If we reached here, we are logged in. Save tokens for future runs.
             await blink.save(str(AUTH_PATH))
-            AUTH_PATH.chmod(0o600)  # Owner read/write only
+            AUTH_PATH.chmod(0o600)
             logger.info(f"Saved Blink auth to {AUTH_PATH.resolve()}")
+    except BlinkTwoFARequiredError:
+        # Re-raise if 2FA wasn't handled properly
+        logger.error("Two-factor authentication failed or was not completed")
+        raise
+    except (OSError, IOError) as e:
+        logger.error(f"File operation failed: {e}")
+        raise
     except Exception as e:
-        logger.error(f"Authentication failed: {e}")
+        logger.exception(f"Unexpected error during authentication: {e}")
         raise
 
 if __name__ == "__main__":
