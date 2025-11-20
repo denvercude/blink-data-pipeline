@@ -1,0 +1,16 @@
+{
+    "username": "Forrestlee75@gmail.com",
+    "password": "Csun@2014",
+    "uid": "BlinkCamera_bbd19151-40e9-7346-5801-b58da8500054",
+    "device_id": "Blinkpy",
+    "token": "eyJhbGciOiJSUzI1NiIsImprdSI6Ii9vYXV0aC9pbnRlcm5hbC9qd2tzIiwia2lkIjoiNjQ1NWZmNDEiLCJ0eXAiOiJKV1QifQ.eyJhcHBfaWQiOiJhbmRyb2lkIiwiY2lkIjoiYW5kcm9pZCIsImV4cCI6MTc2MjE0NTk4MSwiaGFyZHdhcmVfaWQiOiJCbGlua3B5IiwiaWF0IjoxNzYyMTMxNTgxLCJpc3MiOiJCbGlua09hdXRoU2VydmljZS1wcm9kOnVzLWVhc3QtMTo1OTliMDJlNyIsIm9pYXQiOjE3NjIxMzE1ODEsInJuZCI6IlJ1RThmb0FSbHUiLCJzY29wZXMiOlsiY2xpZW50Il0sInNlc3Npb25faWQiOiJiODVmY2FmNy05M2I5LTRhMjItYTQ2Yi0yNmQyMDg1NjNmMDYiLCJ1c2VyX2lkIjoxNjg0OTE2ODd9.CFyKPtzaZ3WPyrpbOaowoaSDydO5Kmz-9yplEBsdaaLaNaBlTRU0OQJBASGVIr_oY10DahhIIIsmGqiDdPd30C6Qe-W1txK7kZ8vlYDs4HhKhrsr4NCjENFieBPmHgWEcLcVptXHaxq9lNogM2qmvnsmwl1jv7xYQRkzFIQ8GSh856WLsqUsy5y_9JWBRb5Bw7CuYLdtuHfI7fGPyCbMnsiKWeVhZTJF3SVNXuOEn9VoEbEFkI6n5Lw2nlkeg6nVlzMMhMTVAWnlDy_u7zX2hZoIyLOCYVrCTFoXEWu_1GiLZhvzW9xm9wvLw8O5R45QY-YmosDWUYFt3LeifBT4Ww",
+    "expires_in": 14400,
+    "expiration_date": 1762145980.8460398,
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsImprdSI6Ii9vYXV0aC9pbnRlcm5hbC9qd2tzIiwia2lkIjoiNjQ1NWZmNDEiLCJ0eXAiOiJKV1QifQ.eyJpYXQiOjE3NjIxMzE1ODEsImlzcyI6IkJsaW5rT2F1dGhTZXJ2aWNlLXByb2Q6dXMtZWFzdC0xOjU5OWIwMmU3Iiwib2lhdCI6MTc2MjEzMTU4MSwicmVmcmVzaF9jaWQiOiJhbmRyb2lkIiwicmVmcmVzaF9zY29wZXMiOlsiY2xpZW50Il0sInJlZnJlc2hfdXNlcl9pZCI6MTY4NDkxNjg3LCJybmQiOiJ5M1VNcTNZQ0hGIiwic2Vzc2lvbl9pZCI6ImI4NWZjYWY3LTkzYjktNGEyMi1hNDZiLTI2ZDIwODU2M2YwNiIsInR5cGUiOiJyZWZyZXNoLXRva2VuIn0.EI67HD3VTzh-PnA27iNr_Bm-RRIA4lDc-qr4A5CC3nZqfVi3_PPxpJrxP43QJ_UUITTue0tygVsSg7h3c9blVEfwsC96whYKXKQR1MAqw-ORIvy06LeQUCqzjU7A1PEDBbIZHQkdjldG6iufsaOL1aCrHJeD2CENSelSUPmVJ3qPKpHHr94x8rj8vwFEYjzjbgHDuOHIe81n4QNI5M_ExOMlqX1TwRlu6i7NwybtADZqdmgotlK0cb04wUVPuc5yQNovmAUA8hZ8WgsiGOzlkBT9xQXLgbMR9nI3IPSqq2D9B0b52d3zKko8mj8bVDLplGVhO_rnwfqFYjrKM6eB5A",
+    "host": "u027.immedia-semi.com",
+    "region_id": "u027",
+    "client_id": "1328537",
+    "account_id": 435085,
+    "user_id": "435085",
+    "2fa_code": "531851"
+}
